@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a66c2" />
+  <title>Revisión de posts · LinkedIn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span id="projectTitle">Calendario LinkedIn</span>
+      </div>
+      <div class="progress">
+        <span id="progressText">0 / 16 revisados</span>
+        <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" id="intro">
+      <h1 id="greeting">Hola</h1>
+      <p>
+        Aquí tienes los <strong>16 posts</strong> propuestos para tu LinkedIn, uno por semana (martes 08:00).
+        Lee cada uno y marca tu decisión: <strong>lo apruebas</strong>, <strong>no lo quieres</strong>, o
+        <strong>lo quieres con cambios</strong>. Si tienes una nota o una idea, escríbela: con eso ajusto el texto final.
+      </p>
+      <p class="muted">Se guarda solo. Puedes salir y volver cuando quieras.</p>
+      <div id="syncNote" class="sync-note"></div>
+    </section>
+
+    <div class="filters">
+      <button class="chip is-active" data-filter="all">Todos</button>
+      <button class="chip" data-filter="pending">Pendientes</button>
+      <button class="chip" data-filter="ok">Aprobados</button>
+      <button class="chip" data-filter="changes">Con cambios</button>
+      <button class="chip" data-filter="no">Descartados</button>
+    </div>
+
+    <div id="list" class="list"></div>
+
+    <footer class="footer">
+      <p class="muted">Cuando termines, avísame y preparo los textos definitivos con tus notas. Gracias por revisarlo con cariño.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
